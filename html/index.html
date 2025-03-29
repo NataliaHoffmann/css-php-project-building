@@ -1,5 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+    Notes: 
+        -we have to use php, for the header and footer nav, so we need to change the name of the page to 
+            index.php so you can open and close ( <?php  ?> ) around it. 
+
+        -I could do it but I need your "approval"
+
+        -I will post an example of the form so you can adapt and put on here with the necessary fields
+
+
+        <form method="post" action="./backend/add.php">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" placeholder="Type first name">
+                </div>
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname"placeholder="Type last name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Your Email"></p>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="^[0-9]{10}$">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Hobbies</legend>
+                <div>
+                    <label for="hobbies">Enter your hobbies:</label>
+                    <textarea name="hobbies" id="hobbies" placeholder="Write your hobbies here" required></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Available Days</legend>
+                <div>
+                    <label for="monday">
+                        <input type="checkbox" id="monday" name="days[]" value="Monday"> Monday
+                    </label>
+                    <div id="monday-time" class="time-options" style="display: none;">
+                        <label><input type="checkbox" name="monday-time[]" value="Morning"> Morning</label>
+                        <label><input type="checkbox" name="monday-time[]" value="Afternoon"> Afternoon</label>
+                        <label><input type="checkbox" name="monday-time[]" value="Evening"> Evening</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="tuesday">
+                        <input type="checkbox" id="tuesday" name="days[]" value="Tuesday"> Tuesday
+                    </label>
+                    <div id="tuesday-time" class="time-options" style="display: none;">
+                        <label><input type="checkbox" name="tuesday-time[]" value="Morning"> Morning</label>
+                        <label><input type="checkbox" name="tuesday-time[]" value="Afternoon"> Afternoon</label>
+                        <label><input type="checkbox" name="tuesday-time[]" value="Evening"> Evening</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="wednesday">
+                        <input type="checkbox" id="wednesday" name="days[]" value="Wednesday"> Wednesday
+                    </label>
+                    <div id="wednesday-time" class="time-options" style="display: none;">
+                        <label><input type="checkbox" name="wednesday-time[]" value="Morning"> Morning</label>
+                        <label><input type="checkbox" name="wednesday-time[]" value="Afternoon"> Afternoon</label>
+                        <label><input type="checkbox" name="wednesday-time[]" value="Evening"> Evening</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="thursday">
+                        <input type="checkbox" id="thursday" name="days[]" value="Thursday"> Thursday
+                    </label>
+                    <div id="thursday-time" class="time-options" style="display: none;">
+                        <label><input type="checkbox" name="thursday-time[]" value="Morning"> Morning</label>
+                        <label><input type="checkbox" name="thursday-time[]" value="Afternoon"> Afternoon</label>
+                        <label><input type="checkbox" name="thursday-time[]" value="Evening"> Evening</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="friday">
+                        <input type="checkbox" id="friday" name="days[]" value="Friday"> Friday
+                    </label>
+                    <div id="friday-time" class="time-options" style="display: none;">
+                        <label><input type="checkbox" name="friday-time[]" value="Morning"> Morning</label>
+                        <label><input type="checkbox" name="friday-time[]" value="Afternoon"> Afternoon</label>
+                        <label><input type="checkbox" name="friday-time[]" value="Evening"> Evening</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="saturday">
+                        <input type="checkbox" id="saturday" name="days[]" value="Saturday"> Saturday
+                    </label>
+                    <div id="saturday-time" class="time-options" style="display: none;">
+                        <label><input type="checkbox" name="saturday-time[]" value="Morning"> Morning</label>
+                        <label><input type="checkbox" name="saturday-time[]" value="Afternoon"> Afternoon</label>
+                        <label><input type="checkbox" name="saturday-time[]" value="Evening"> Evening</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="sunday">
+                        <input type="checkbox" id="sunday" name="days[]" value="Sunday"> Sunday
+                    </label>
+                    <div id="sunday-time" class="time-options" style="display: none;">
+                        <label><input type="checkbox" name="sunday-time[]" value="Morning"> Morning</label>
+                        <label><input type="checkbox" name="sunday-time[]" value="Afternoon"> Afternoon</label>
+                        <label><input type="checkbox" name="sunday-time[]" value="Evening"> Evening</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter a username" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+            </fieldset>
+            <div class="button-container">
+                <input type="submit" name="Submit" value="Add">
+                <input type="reset" value="Clear">
+            </div>
+            
+        </form>
+
+        - Sorry, I know it's big but it's just to have an example of almost everything. We need to change
+            multiple things as the availability, because we will have to put a precise day and time accordingly
+            to the classes so for example: after you make the schedule, if the first option that the user needs 
+            to make it the type of the class, and he/she chooses yoga, then the next line will only appear
+            the available yoga classes, etc. Also we can make appear another line if the user wants to have 
+            multiple preferences
+
+        -The path of the form will be:
+            index.html -> backend/add.php -> (add needs crud and validate) -> crud needs database
+            this part is to retrive information from the user and upload on database
+
+        -The path of the login will be:
+            index.html -> backend/login.php -> login needs crud (read part) -> crud needs database
+            then we have a userpage.php (or html)
+        
+        -front end part will be pages as: index.php, userpage.php (or similar), maybe schedule and 
+            gym pictures page?
+
+-->
 <head>
     <!--BASIC METADATA-->
     <meta charset="UTF-8">
@@ -10,7 +156,6 @@
     <!--LINK SHEETS AND ICONS-->
     <link rel="stylesheet" href="../css/styles.css"> <!-- CSS -->
     <link rel="icon" href="../images/favicon (2).png"> <!-- ICON -->
-    
 </head>
 <body>
     <header>
