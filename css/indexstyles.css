@@ -1,0 +1,230 @@
+/* remove all underlines*/
+a {
+    text-decoration: none; 
+}
+
+/* registration CTA */
+.details {
+    text-align: center;
+    padding: 40px;
+    background-color: #e2e8ee; 
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* style heading */
+.details h1 {
+    font-size: 28px;
+    color: #021054;
+    margin-bottom: 20px;
+}
+
+/* style p */
+.details p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* button style */
+.registerBtn button {
+    background-color: #667f9a; 
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 4px; 
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* transition hover */
+}
+
+/* hover effect for the button */
+.registerBtn button:hover {
+    background-color: #91b4d2; /* change on hover */
+    transform: translateY(-3px); /* on hover move  */
+}
+
+.Intro {
+    background-image: url('../images/hmpgimg.jpg'); 
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    text-decoration: none;
+ 
+}
+
+#reviews {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    padding: 20px;
+    background-color: #f7f7f7; 
+  }
+  
+  #reviews blockquote {
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px;
+    border-left: 3px solid #4d6d8f; 
+    margin-bottom: 20px; 
+    transition: font-weight 0.3s ease; 
+  }
+  
+  #reviews blockquote p {
+    margin: 0; 
+  }
+  
+  /* hover effect */
+  #reviews blockquote:hover p {
+    font-weight: bold;
+  }
+
+/*  default styles */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* style body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+}
+
+/* header navigation */
+header {
+    background-color: #90A8C3;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #96C5F7;
+}
+
+/* Intro  */
+.Intro {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ADA7C9;
+    color: #fff;
+}
+
+.Intro h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.Intro p {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+/* Who We Are  */
+#who-we-are {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#who-we-are h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #64A6BD;
+}
+
+#who-we-are p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* membership */
+#membership-info {
+    padding: 40px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+#membership-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#membership-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+#membership-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#membership-info ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+#membership-info ul li strong {
+    color: #3498db;
+}
+
+/* testimonials */
+#reviews {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+#reviews blockquote {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#reviews blockquote footer {
+    font-size: 16px;
+    color: #3498db;
+}
